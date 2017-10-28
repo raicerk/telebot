@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/botgram/telebot.git"
+    "url": "git+https://github.com/raicerk/telebot.git"
   },
   "keywords": [
     "telegram",
@@ -18,7 +18,10 @@
   "author": "Juan Mora",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/botgram/telebot/issues"
+    "url": "https://github.com/raicerk/telebot/issues"
   },
-  "homepage": "https://github.com/botgram/telebot#readme"
+  "homepage": "https://github.com/raicerk/telebot#readme",
+  "dependencies": {
+    "botgram": "^2.0.1"
+  }
 }
