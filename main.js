@@ -1,5 +1,5 @@
 const botgram = require("botgram")
-const bot = botgram("477829273:AAFKH-a5wMTAvyk2o-6hH0dLRfo6hYsSPyE")
+const bot = botgram("apikey")
 
 bot.command("start", "help", (msg, reply) =>
   reply.text("To schedule an alert, do: /alert <seconds> <text>"))
