@@ -1,5 +1,7 @@
 const botgram = require("botgram")
-const bot = botgram("477829273:AAFKH-a5wMTAvyk2o-6hH0dLRfo6hYsSPyE")
+const bot = botgram("")
+const cmd = require('node-cmd');
+const fs = require("fs");
 
 bot.command("start", "help", (msg, reply) =>
   reply.text("To schedule an alert, do: /alert <seconds> <text>"))
@@ -13,6 +15,16 @@ bot.command("alert", (msg, reply) => {
 
 bot.command("Saludo",(msg, reply)=>{
 	reply.text(`Hola xodo ${msg.args(1)[0]}`)
+})
+
+bot.command("Agenda",(msg,reply)=>{
+  if (msg.args(1)[0]) {
+    console.log(msg.args(1)[0]);
+    let rand = Math.round(new Date()/1000);
+    cmd.run(`ttsmp3 "${msg.args(1)[0]}" -o ./archivos/${rand}.mp3 -l es -g ml`);
+    const stream = fs.createReadStream(`./archivos/${rand}.mp3`);
+    reply.audio(stream);
+  }
 })
 
 bot.command((msg, reply) =>

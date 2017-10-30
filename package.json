@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/raicerk/telebot#readme",
   "dependencies": {
-    "botgram": "^2.0.1"
+    "botgram": "^2.0.1",
+    "fs": "0.0.1-security",
+    "node-cmd": "^3.0.0",
+    "ttsmp3": "^1.0.1"
   }
 }
